@@ -5,7 +5,11 @@
     "@internals/tsconfig/platform.server.json"
   ],
   "compilerOptions": {
-    "noEmit": true
+    "allowJs": true,
+    "allowImportingTsExtensions": true,
+    "erasableSyntaxOnly": true,
+    "noEmit": true,
+    "verbatimModuleSyntax": true
   },
   "exclude": ["apps", "internals", "node_modules", "packages"]
 }

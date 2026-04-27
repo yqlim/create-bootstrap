@@ -4,8 +4,9 @@
   "type": "module",
   "description": "~~description~~",
   "private": true,
-  "packageManager": "pnpm@10.32.1+sha512.a706938f0e89ac1456b6563eab4edf1d1faf3368d1191fc5c59790e96dc918e4456ab2e67d613de1043d2e8c81f87303e6b40d4ffeca9df15ef1ad567348f2be",
+  "packageManager": "pnpm@10.33.2+sha512.a90faf6feeab71ad6c6e57f94e0fe1a12f5dcc22cd754db40ae9593eb6a3e0b6b12e3540218bb37ae083404b1f2ce6db2a4121e979829b4aff94b99f49da1cf8",
   "scripts": {
+    "build": "pnpm -r build",
     "format": "prettier --write .",
     "lint-staged": "lint-staged",
     "preinstall": "npx only-allow pnpm",
@@ -14,7 +15,7 @@
     "prepare:gitHooks": "husky",
     "test": "pnpm run test:spelling && pnpm run test:lint && pnpm run test:type && pnpm run test:unit",
     "test:coverage": "pnpm run --recursive test:coverage",
-    "test:lint": "eslint --max-warnings 0 . && pnpm run --recursive test:lint",
+    "test:lint": "eslint --max-warnings 0 --no-warn-ignored . && pnpm run --recursive test:lint",
     "test:spelling": "cspell lint '**'",
     "test:type": "tsc --noEmit && pnpm run --recursive test:type",
     "test:unit": "pnpm run --recursive test:unit"
@@ -27,14 +28,14 @@
     "@internals/lint-staged-config": "workspace:*",
     "@internals/prettier-config": "workspace:*",
     "@internals/tsconfig": "workspace:*",
-    "cspell": "^9.7.0",
+    "cspell": "^9.8.0",
     "eslint": "^9.39.4",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
-    "prettier": "^3.8.1",
+    "prettier": "^3.8.3",
     "prettier-plugin-jsdoc": "^1.8.0",
     "prettier-plugin-pkg": "^0.21.2",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.57.1"
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.0"
   }
 }
