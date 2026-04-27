@@ -6,8 +6,10 @@
   ],
   "compilerOptions": {
     "outDir": "dist",
+    "rootDir": "src",
     "useDefineForClassFields": true,
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+    "types": ["node"]
   },
   "include": ["src"]
 }
